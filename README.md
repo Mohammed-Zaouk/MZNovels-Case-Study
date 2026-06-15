@@ -1,10 +1,17 @@
 # MZNovels
 
-> **This repository exists to verify the MZNovels project for recruiters and collaborators.** The source code is private — MZNovels is a live production application handling real user accounts and published content.
+> **This repository is private.** MZNovels is a live production application
+> with real user accounts, published content, and credentials that can't be
+> safely open-sourced. Exposing the codebase would put real users at risk —
+> so this public repo exists purely to verify the project for recruiters and
+> collaborators.
 >
-> For the full technical case study — architecture decisions, deployment challenges, traffic analysis, and verification documents — visit:
+> The full technical case study — architecture decisions, deployment
+> challenges, traffic analysis, and verification documents — is here:
 >
 > **[zaouk.dev/case-study/mznovels →](https://zaouk.dev/case-study/mznovels)**
+>
+> I'm happy to walk through the code directly in an interview.
 
 ---
 
