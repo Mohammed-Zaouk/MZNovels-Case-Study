@@ -54,8 +54,7 @@ The stack runs across four Docker containers:
 
 - **Web** — Django application served via Gunicorn
 - **Nginx** — reverse proxy, static file serving, SSL termination, and rate limiting
-- **Database** — MySQL
-- **Init** — one-time container for DB setup and migrations
+- **Database** — MySQL, with a dedicated initialization container for setup and migrations
 
 Authentication is handled by a custom OAuth2 backend (`oauth2_backend.py`, `adapters.py`, `backends.py`) layered on top of Django's auth system, so user sessions stay entirely under application control with no third-party auth dependency.
 
@@ -97,34 +96,9 @@ MZNovels-website/
 └── manage.py
 ```
 
-## Running Locally
-
-> Note: this runs a local instance only. The production database and user content are not included.
-
-### Requirements
-
-- Docker
-- Python 3.x
-
-### With Docker
-
-```bash
-git clone https://github.com/Mohammed-Zaouk/MZNovels-website.git
-cd MZNovels-website
-docker-compose up --build
-```
-
-### Without Docker
-
-```bash
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
-
 ## Verification
 
-Ownership and traffic analytics are documented in the [case study](https://zaouk.dev/case-study/mznovels), including a domain purchase receipt and Google Analytics exports covering early growth, the bot-traffic period, and post-mitigation recovery.
+Ownership and traffic analytics are documented in the [case study](https://zaouk.dev/case-study/mznovels), including a domain purchase receipt and Google Analytics exports.
 
 ## License
 
